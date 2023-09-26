@@ -1,5 +1,6 @@
 package com.test.bank.tests;
 
+import Utils.ConfigReader;
 import com.test.bank.pages.BankLoginPage;
 import com.test.bank.pages.BankManagerPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -13,20 +14,21 @@ import java.time.Duration;
 public class BankManagerTest extends BanlTestBase{
     @Test
     public void validateAddCustomerFunctionality() throws InterruptedException {
-       // WebDriverManager.chromedriver().setup();
-        //ChromeOptions options=new ChromeOptions();
-        //options.addArguments("--remote-allow-origins=*");
-       // WebDriver driver=new ChromeDriver(options);
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        //driver.manage().window().maximize();
-        //driver.navigate().to("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/Login");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options=new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriver driver=new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        driver.navigate().to("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/Login");
 
         BankLoginPage loginPage=new BankLoginPage(driver);
         loginPage.clickManagerButton();
         Thread.sleep(3000);
 
         BankManagerPage bankManagerPage=new BankManagerPage(driver);
-        bankManagerPage.addPublicFunctionality(driver,"Zebo", "Sabur", "60074", "Customer added successfully with customer id");
+        bankManagerPage.addPublicFunctionality(driver, ConfigReader.readProperty("BankTestName"), ConfigReader.readProperty("BankTestSurname"), ConfigReader.readProperty("BankTestPostcode"), ConfigReader.readProperty("BankTestMessage"));
+
     }
     @Test
     public void validateOpenAccountFunctionality() throws InterruptedException {

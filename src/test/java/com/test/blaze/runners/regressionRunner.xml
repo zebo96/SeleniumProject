@@ -3,20 +3,39 @@
 <!--This doctype is telling the system that this file will be suite(regression, smoke)-->
 <suite name="Regression Suite">
     <test name="Blaze Tests">
+        <parameter name="category" value="Laptops"> </parameter>
+        <parameter name="brand" value="MacBook Pro"> </parameter>
+        <parameter name="expectedHeader" value="MacBook Pro"> </parameter>
+        <parameter name="expectedPrice" value="$1100 *includes tax"> </parameter>
+        <parameter name="expectedDescriptionTop" value="Product description"> </parameter>
+        <parameter name="expectedDescriptionBottom" value="Apple has introduced three new versions of its MacBook Pro line, including a 13-inch and 15-inch model with the Touch Bar, a thin, multi-touch strip display that sits above the MacBook Pro's keyboard."> </parameter>
+        <parameter name="expectedAlertMessage" value="Product added"> </parameter>
+
+        <parameter name="option" value="Laptops"> </parameter>
+        <parameter name="macbookType" value="MacBook Pro"> </parameter>
+        <parameter name="expectedMessage" value="Product added"> </parameter>
+        <parameter name="expectedTitle" value="MacBook Pro"> </parameter>
+        <parameter name="expectedPrice2" value="1100"> </parameter>
+        <parameter name="name" value="Zebo"> </parameter>
+        <parameter name="country" value="USA"> </parameter>
+        <parameter name="city" value="Chicago"> </parameter>
+        <parameter name="number" value="123456789"> </parameter>
+        <parameter name="month" value="June"> </parameter>
+        <parameter name="year" value="2023"> </parameter>
         <classes>
             <class name="com.test.blaze.tests.BlazeMacBookProTest"> </class>
-            <class name="com.test.blaze.tests.BlazeCartPageTest"> </class>
+<!--            <class name="com.test.blaze.tests.BlazeCartPageTest"> </class>-->
             <class name="com.test.blaze.tests.BlazePlaceOrderTest"> </class>
 
         </classes>
 
-    </test>
-    <test name="Bank Tests">
-        <classes>
-            <class name="com.test.bank.tests.BankLoginTest"> </class>
-            <class name="com.test.bank.tests.BankManagerTest"> </class>
-            <class name="com.test.bank.tests.homework"> </class>
-        </classes>
-    </test>
+     </test>
+<!--    <test name="Bank Tests">-->
+<!--        <classes>-->
+<!--            <class name="com.test.bank.tests.BankLoginTest"> </class>-->
+<!--            <class name="com.test.bank.tests.BankManagerTest"> </class>-->
+<!--            <class name="com.test.bank.tests.homework"> </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>

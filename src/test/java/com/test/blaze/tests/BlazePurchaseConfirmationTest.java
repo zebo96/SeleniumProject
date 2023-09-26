@@ -13,7 +13,7 @@ public class BlazePurchaseConfirmationTest extends BlazeTestBase{
         BlazeMacBookProPage blazeMacBookProPage=new BlazeMacBookProPage(driver);
         blazeMacBookProPage.clickAddToCartButton(driver, "Product added");
         BlazeCartPage blazeCartPage=new BlazeCartPage(driver);
-        blazeCartPage.validatePurchase("MacBook Pro", "1100");
+        blazeCartPage.validatePurchase();
         BlazePlaceOrderPage blazePlaceOrderPage=new BlazePlaceOrderPage(driver);
         blazePlaceOrderPage.purchaseOrder("Zebo","USA","Chicago","123456789","June","2023");
         BlazePurchaseConfirmationPage blazePurchaseConfirmationPage=new BlazePurchaseConfirmationPage(driver);

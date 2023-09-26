@@ -17,6 +17,6 @@ public class BlazeCartPageTest extends BlazeTestBase{
         BlazeMacBookProPage blazeMacBookProPage=new BlazeMacBookProPage(driver);
         blazeMacBookProPage.clickAddToCartButton(driver, "Product added");
         BlazeCartPage blazeCartPage=new BlazeCartPage(driver);
-        blazeCartPage.validatePurchase("MacBook Pro", "1100");
+        blazeCartPage.validatePurchase();
     }
 }
