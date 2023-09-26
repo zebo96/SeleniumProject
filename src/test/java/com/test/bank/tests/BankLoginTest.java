@@ -1,6 +1,5 @@
 package com.test.bank.tests;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.test.bank.pages.BankLoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

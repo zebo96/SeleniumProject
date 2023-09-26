@@ -19,6 +19,6 @@ public class TestBase {
         if (!iTestResult.isSuccess()) {
             BrowserUtils.getScreenShot(driver, "Pictures");
         }
-        //  driver.quit();
+          driver.quit();
     }
 }

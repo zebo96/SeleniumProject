@@ -1,11 +1,11 @@
 package com.test.swagLabs.tests;
 
 import Utils.ConfigReader;
-import Utils.DriverHelper;
+
 import com.test.swagLabs.pages.SwagLabsLoginPage;
-import org.openqa.selenium.WebDriver;
+
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
+
 import org.testng.annotations.Test;
 
 public class SwagLabsLoginPageTest extends TestBase{

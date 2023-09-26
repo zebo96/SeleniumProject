@@ -25,25 +25,25 @@ public class BlazeCartPage {
     WebElement placeOrderButton;
 
     public void validatePurchase() throws InterruptedException {
-//        Thread.sleep(2000);
-//        cart.click();
-//        Thread.sleep(1000);
-//        Assert.assertEquals(BrowserUtils.getText(title), expectedTitle);
-//        Thread.sleep(2000);
-//        Assert.assertEquals(BrowserUtils.getText(price), expectedPrice);
+        Thread.sleep(2000);
+        cart.click();
+        Thread.sleep(1000);
+        Assert.assertEquals(BrowserUtils.getText(title), expectedTitle);
+        Thread.sleep(2000);
+        Assert.assertEquals(BrowserUtils.getText(price), expectedPrice);
         placeOrderButton.click();
         Thread.sleep(2000);
     }
 
     //ANOTHER WAY TO DO IT
-   // @FindBy(xpath = "//td")
-  //List<WebElement> information; //picture; title; price; delete
- //  public void getInfoFromCart(String expectedTitle, String expectedPrice){
-       // List<String> expectedInfo= Arrays.asList("",expectedTitle, expectedPrice,"");
-       //for (int i=0; i< information.size()-1; i++){
-        //   Assert.assertEquals(BrowserUtils.getText(information.get(i)), expectedInfo);
-       // }
-  //}
+    @FindBy(xpath = "//td")
+  List<WebElement> information; //picture; title; price; delete
+   public void getInfoFromCart(String expectedTitle, String expectedPrice){
+        List<String> expectedInfo= Arrays.asList("",expectedTitle, expectedPrice,"");
+       for (int i=0; i< information.size()-1; i++){
+           Assert.assertEquals(BrowserUtils.getText(information.get(i)), expectedInfo);
+        }
+  }
 
 
 }

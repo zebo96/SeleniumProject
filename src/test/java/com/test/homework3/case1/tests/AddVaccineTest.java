@@ -24,24 +24,24 @@ public class AddVaccineTest extends Homework3TestBase{
         homePage.addVaccine(vaccineName);
 
     }
-//    @Test()
-//    public void CartTest() throws InterruptedException {
-//        LoginPage loginPage=new LoginPage(driver);
-//        loginPage.Login("Zebo", "1234");
-//        HomePage homePage=new HomePage(driver);
-//        homePage.addVaccine("Pfizer Vaccine");
-//
-//        homePage.goToCart();
-//    }
-//    @Test()
-//    public void vaccineValidation() throws InterruptedException {
-//        LoginPage loginPage=new LoginPage(driver);
-//        loginPage.Login("Zebo", "1234");
-//        HomePage homePage=new HomePage(driver);
-//        homePage.addVaccine("Pfizer Vaccine");
-//        homePage.goToCart();
-//        CartPage cartPage=new CartPage(driver);
-//        cartPage.checkVaccines("Pfizer Vaccine", "Sputnik Vaccine");
-//    }
+    @Test()
+    public void CartTest() throws InterruptedException {
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.Login("Zebo", "1234");
+        HomePage homePage=new HomePage(driver);
+        homePage.addVaccine("Pfizer Vaccine");
+
+        homePage.goToCart();
+    }
+    @Test()
+    public void vaccineValidation() throws InterruptedException {
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.Login("Zebo", "1234");
+        HomePage homePage=new HomePage(driver);
+        homePage.addVaccine("Pfizer Vaccine");
+        homePage.goToCart();
+        CartPage cartPage=new CartPage(driver);
+        cartPage.checkVaccines("Pfizer Vaccine", "Sputnik Vaccine");
+    }
 
 }
