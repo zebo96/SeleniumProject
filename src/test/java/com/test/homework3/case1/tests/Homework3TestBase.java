@@ -21,6 +21,6 @@ public class Homework3TestBase {
         if (!iTestResult.isSuccess()) {
             BrowserUtils.getScreenShot(driver, "HomeworkPictures");
         }
-       // driver.quit();
+        driver.quit();
     }
 }
